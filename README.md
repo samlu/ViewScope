@@ -15,9 +15,9 @@ The content of ids.xml is shown below:
 ```
 
 ## Usage
-A `ViewScope` is created when you first call `View.viewScope` for a view. Any coroutine launched in this scope is automatically canceled if the view is detached from the window. Usually, a `View` is detached from a widnow after `Activity.onDestroy()`, `Fragment.onDestroyView()` called or you manually removed this view from the view tree.
+A `ViewScope` is created when you first call `View.viewScope` for a view. Any coroutine launched in this scope is automatically canceled if the view is detached from the window. Usually, a `View` is detached from a widnow after `Activity.onDestroy()`, `Fragment.onDestroyView()` called, or you manually remove this view from the view tree.
 
-You can access the `CoroutineScope` of a `View` through the `viewScope` property of the View, as shown in the following example:
+You can access the `CoroutineScope` of a `View` through the `viewScope` property of the `View`, as shown in the following example:
 ```kotlin
 val view: View = ...
 view.viewScope.launch {
